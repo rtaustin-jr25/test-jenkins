@@ -6,5 +6,10 @@ pipeline {
         echo 'Guess What!'
       }
     }
+    stage('Maven Build') {
+      steps {
+        sh 'mvn clean package -BskipTests'
+      }
+    }
   }
 }
